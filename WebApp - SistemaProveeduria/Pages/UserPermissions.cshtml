@@ -1,0 +1,63 @@
+﻿@page
+@model WebApp___SistemaProveeduria.Pages.UserPermissionsModel
+@{
+}
+
+<script src="~/js/userspermissions.js"></script>
+
+<h1 class="text-center mt-4">Permisos de Usuario</h1>
+
+<div class="bs-docs-section mt-2">
+    <div>
+        <h4 class="mt-3">Usuarios</h4>
+        <table id="tblUsers" class="display" style="width:100%">
+        <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Correo</th>
+                </tr>                
+            </thead>
+        </table>
+    </div>
+</div>
+
+<div class="mt-5">
+    
+    <div class="input-group mb-3 gap-2">
+        <div class="form-group">
+            <h6> Usuario seleccionado </h6>
+       </div>
+        <input id="userId" type="text" class="form-control" placeholder="Id Usuario" aria-describedby="button-addon2" data-kwimpalastatus="alive" data-kwimpalaid="1680343359100-4" data-form-type="id">
+        <input id="userName" type="text" class="form-control" placeholder="Nombre" aria-describedby="button-addon2" data-kwimpalastatus="alive" data-kwimpalaid="1680343359100-4" data-form-type="username">
+    </div>
+
+</div>
+
+<div class="bs-docs-section mt-2">
+    <div>
+        <h4 class="mt-3">Permisos</h4>
+        <div class="mt-3 d-flex justify-content-between">
+            <button type="button" class="btn btn-primary bg-primario boton" data-form-type="action" id="btnGoToPermissions">Gestionar Permisos</button>
+        </div>
+        <div class="mt-3"></div>
+        <table id="tblPermissions" class="display" style="width:100%">
+        <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Permiso</th>
+                    <th>Estado</th>
+                </tr>                
+            </thead>
+        </table>
+    </div>
+</div>
+
+<div class="mt-5 d-flex justify-content-between">
+    <button type="button" class="btn btn-primary bg-primario boton" data-form-type="action" id="btnAssignPermissions">Asignar Permisos</button>
+    <button type="button" class="btn btn-primary bg-primario boton" data-form-type="action" id="btnRemovePermissions">Quitar Permisos</button>
+    <button type="button" class="btn btn-primary bg-primario boton" data-form-type="action" id="btnCancel">Cancelar</button>
+</div>
+
+

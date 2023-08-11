@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Sistema de Proveeduria</title>
+    <link href="~/css/normalize.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap-flatly.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/teamstyles.css" rel="stylesheet" />
+    <link href="~/css/datatables.css" rel="stylesheet"/>
+
+    @*Scripts*@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/controlactions.js"></script>
+    <script src="~/js/datatables.js"></script>
+    <script src="~/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="regularNav">
+            <div class="container-fluid">
+                <a class="navbar-brand text-primary">
+                    <img class="header-logo" src="~/resources/Logo.png" alt="Logotipo" width="40px" height="40px"></img>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor03">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Index">
+                                Inicio
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Tenders">Licitaciones</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="sessionNav">
+            <div class="container-fluid">
+                <a class="navbar-brand text-primary">
+                    <img class="header-logo" src="~/resources/Logo.png" alt="Logotipo" width="40px" height="40px"></img>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor03">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Index">
+                                Inicio
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Tenders">Licitaciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Memberships">Membresías</a>
+                        </li> 
+                        <li class="nav-item">
+                            <a class="nav-link" id="inventory" href="/Inventory">Inventario</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Bills" id="billsOption">Facturas</a>
+                        </li>
+                        <li class="nav-item dropdown" id="crudOptions">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Mantenimientos</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/UserPermissions" id="permissionsOption">Permisos de usuarios</a>
+                                <a class="dropdown-item" href="/ManageTaxes" id="taxesOption">Impuestos</a>
+                                <a class="dropdown-item" href="/ManageProducts" id="productsOption">Productos</a>
+                                <a class="dropdown-item" href="/ManageSchools" id="schoolsOption">Escuelas</a>
+                                <a class="dropdown-item" href="/ManageMembership" id="membershipsOption">Membresías</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/ManageTenders" id="tenderssOption">Gestion de licitaciones</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" id="usernameNav"></a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/Profile">Perfil</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" id="logOut">Cerrar sesion</a>
+                        </div>
+                    </div>
+                    <div class="iconos">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#082f32" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <circle cx="12" cy="7" r="4" />
+                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container mt-5 m">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer" style="margin-top: 310px;">
+        <div class="footer1 bg-terciario">
+            <section class="footer1-seccion1 text-center">
+                <h3>Sobre nosotros</h3>
+                <p>
+                    Somos una empresa conformada de gente ágil y curiosa para el desarollo web. 
+                    Nuestros miembros son capaces de armar aplicaciones web y de móvil lo cual nos permite competir en el mercado actual.
+                </p>
+            </section>
+            <section class="footer1-seccion2 text-center">
+                <h3>Nuestras Redes</h3>
+                <div class="redes-sociales">
+                    <div class="iconos">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+                        </svg>
+                    </div>
+                    <div class="iconos">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                        </svg>
+                    </div>
+                    <div class="iconos">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <rect x="4" y="4" width="16" height="16" rx="4" />
+                            <circle cx="12" cy="12" r="3" />
+                            <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+                        </svg>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="bg-primario footer2 text-white text-center">
+            <p class="">© 2023 Solid Solutions | Powered by Solid Solutions</p>
+        </div>
+    </footer>
+
+    
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

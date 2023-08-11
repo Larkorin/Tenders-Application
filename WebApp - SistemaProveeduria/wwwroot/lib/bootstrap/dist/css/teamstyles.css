@@ -1,0 +1,208 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;400;700&display=swap");
+
+.custom-label {
+    margin-right: 10px;
+}
+
+:root {
+    --primario: #082f32;
+    --secundatio: #2c454b;
+    --terciario: #365253;
+    --claro: #d2d2d2;
+    --naranja: #e84f31;
+}
+
+/*Definicion del font*/
+body {
+    font-family: 'JetBrains Mono', monospace;
+}
+p{
+    font-weight:200;
+}
+h2,h3{
+    font-weight:400;
+}
+h1{
+    font-weight:700;
+}
+
+/*Definicion de los colores de fondo*/
+.bg-primario {
+    background-color: var(--primario);
+}
+.bg-secundario {
+    background-color: var(--secundatio);
+}
+.bg-terciario {
+    background-color: var(--terciario);
+}
+.bg-claro {
+    background-color: var(--claro);
+}
+.bg-naranja {
+    background-color: var(--naranja);
+}
+
+/*Aqui inicia la definicion de estilos del layout*/
+
+html{
+    min-height: 100%;
+}
+
+/*Aqui se define el estilo de los botones de navegation*/
+.header-logo{
+    
+}
+
+.navegacion {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem .5rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .navegacion{
+        flex-direction: row;
+        justify-content:left;
+        
+    }
+}
+
+.contenedor-navegacion{
+    width: 100%;
+    padding: .5rem;
+    border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+    .contenedor-navegacion {
+        width: 10rem;
+        padding: .5rem;
+    }
+}
+
+.enlaces{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:.5rem;
+}
+
+@media (min-width: 768px) {
+    .enlaces{
+        flex-direction:row;
+    }
+}
+
+.boton:hover{
+    background-color: var(--naranja);
+}
+
+.contenedor-navegacion:hover{
+    background-color: var(--naranja);
+}
+
+.usuario{
+    width:100%;
+    color: var(--primario);
+    display:flex;
+    flex-direction:column-reverse;
+}
+
+@media (min-width: 768px) {
+    .usuario {
+        color: var(--primario);
+        display: flex;
+        flex-direction:row;
+        margin: 0 auto;
+        justify-content:right;
+    }
+}
+
+/*Esta parte define los estilos de los footers*/
+footer{
+    
+}
+
+.footer1 {
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    color: white;
+    padding: .5rem 0;
+    align-items:center;
+
+}
+@media (min-width: 768px) {
+    .footer1 {
+        flex-direction: row;
+        gap: 0 40%;
+        padding: .5rem 5%;
+    }
+}
+.footer1-seccion1{
+    width: 30%;
+}
+.footer1-seccion1 h3{
+    font-weight:bold;
+}
+
+.redes-sociales {
+    margin-top: 2rem;
+    display:flex;
+    column-gap:2rem;
+    justify-content:center;
+}
+
+.footer1.seccion2{
+    
+    width: 30%;
+}
+.footer1-seccion2 h3 {
+    font-weight: bold;
+}
+
+.footer2{
+    width: 100%;
+}
+/*Aqui finaliza la definicion de estilos del layout*/
+
+/*
+    Esta seccion es parte de los estilos para las secciones con switches
+*/
+
+
+.switches{
+    display:flex;
+    justify-content:center;
+}
+
+@media (min-width: 768px) {
+    .gridSwitches {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+    }
+}
+
+.centrarTodo{
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+@media (min-width: 768px) {
+    .boton{
+        align-self:center;
+        width:15rem
+    }
+}
+
+.fotoPerfil{
+    display:flex;
+    justify-content:center;
+}

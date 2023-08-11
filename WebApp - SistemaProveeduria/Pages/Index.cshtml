@@ -1,0 +1,70 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Página principal";
+}
+
+<script src="~/js/homeView.js"></script>
+
+<div class="text-black">
+  <div class="centrarTodo">
+    <div class="text-center text-md-start p-3">
+      <h3 class="text-center">¡Bienvenido a nuestro sitio de licitaciones!</h3>
+      <h4 class="text-center mt-3">Aquí podrás encontrar las mejores oportunidades de negocio.</h4>
+      <p class="mt-4">¿Eres parte del equipo directivo de una escuela y siempre estás buscando los mejores recursos para tus estudiantes? ¡Tenemos la solución perfecta para ti! Nuestro sitio exclusivo de licitaciones para escuelas te ofrece una amplia variedad de opciones para adquirir todo lo que necesitas en un solo lugar. Desde equipo deportivo hasta materiales educativos, ¡aquí lo encontrarás todo! Ahorra tiempo y dinero al hacer tus compras de manera eficiente y segura. ¡Únete ahora y descubre cómo podemos ayudarte a llevar la educación al siguiente nivel!</p>
+    </div>
+  </div>
+</div>
+<hr class="mt-3">
+<div class="container mt-5" id="cardsIndex">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h2 class="card-title">Regístrate para participar en las licitaciones</h2>
+                    <p class="card-text">Ingresa tus datos para poder participar en las licitaciones que más te interesen.</p>
+                    <a href="/SignUp" class="btn btn-primary bg-primario boton">Regístrate</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h2 class="card-title">¿Ya tienes cuenta?</h2>
+                    <p class="card-text">Inicia sesión y comienza a participar.</p>
+                    <a href="/Login" class="btn btn-primary bg-primario boton">Iniciar sesión</a>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h2 class="card-title">Licitaciones</h2>
+                    <p class="card-text">Mira nuestras licitaciones, para que puedas elegir en las que quieres participar.</p>
+                    <a href="/Tenders" class="btn btn-primary bg-primario boton">Ver licitaciones</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<div class="container mt-5" id="tendersCard">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h2 class="card-title">Licitaciones</h2>
+                    <p class="card-text">Mira nuestras licitaciones, para que puedas elegir en las que quieres participar.</p>
+                    <a href="/Tenders" class="btn btn-primary bg-primario boton">Ver licitaciones</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h2 class="card-title">¿Quieres ser premium?</h2>
+                    <p class="card-text">Úfnete y disfruta de los beneficios premium, solo para usuario V.I.P.</p>
+                    <a href="/Memberships" class="btn btn-primary bg-primario boton">Ver membresías</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+﻿@page
+@model WebApp___SistemaProveeduria.Pages.GenerateBillModel
+@{
+}
+
+<script src="~/js/generatebill.js"></script>
+
+<h1 class="text-center mt-4">Facturar</h1>
+
+<div class="mt-5">
+    <form>
+        <fieldset>
+            <div class="form-group">
+                <label for="txtTender" class="form-label mt-4">Id Licitación</label>
+                <input type="text" class="form-control" id="txtTender" placeholder="" name="txtTender">
+            </div>
+            <div class="form-group">
+                <label for="txtBillPrice" class="form-label mt-4">Precio</label>
+                <input type="number" class="form-control" id="txtBillPrice" placeholder="Inserte el precio para la factura" name="txtBillPrice">
+            </div>
+        </fieldset>
+    </form>
+    <div class="mt-5 d-flex justify-content-between">
+        <button id="btnCreate" class="source-button btn btn-primary btn-xs" type="button" tabindex="8">Facturar</button>
+        <button id="btnCancel" class="source-button btn btn-primary btn-xs" type="button" tabindex="8">Cancelar</button>
+    </div>
+</div>

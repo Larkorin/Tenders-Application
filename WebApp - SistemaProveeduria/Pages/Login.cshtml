@@ -1,0 +1,31 @@
+﻿@page
+@model WebApp___SistemaProveeduria.Pages.LoginModel
+@{
+}
+<script src="~/js/Login.js"></script>
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="bs-component centrarTodo">
+            <form id="formUser">
+                <fieldset>
+                    <button type="button" id="btnAtras" class="btn btn-warning">Atrás</button>
+                    <legend>Inicio</legend>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="form-label mt-4">Dirección de correo electrónico</label>
+                        <input type="email" class="form-control" id="txtEmail" placeholder="Escriba su dirección de correo electrónico" />
+                    </div>
+                    <div class="form-group">
+                        <label for="txtPassword" class="form-label mt-4">Contraseña</label>
+                        <input type="password" class="form-control" id="txtPassword" placeholder="Escriba su contraseña" />
+                    </div>
+                </fieldset>
+            </form>
+            <br />
+            <button id="btn-Login" class="source-button btn btn-primary btn-xs" type="button" tabindex="8">Iniciar</button>
+            <legend id="loginStatus"></legend>
+            <button id="btn-Recovery" class="source-button btn btn-primary btn-xs" type="button" tabindex="8">Recuperar contraseña</button>
+            <legend id="PasswordRecovery"></legend>
+        </div>
+    </div>
+</div>

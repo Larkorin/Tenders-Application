@@ -1,0 +1,39 @@
+﻿@page
+@model WebApp___SistemaProveeduria.Pages.ManagePermissionsModel
+@{
+}
+
+<script src="~/js/permissions.js"></script>
+
+<h1 class="mt-5">Permisos</h1>
+
+<div class="bs-docs-section mt-2">
+    <div>
+        <h4 class="mt-3">Permisos</h4>
+        <div class="mt-3"></div>
+        <table id="tblPermissions" class="display" style="width:100%">
+        <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Permiso</th>
+                </tr>                
+            </thead>
+        </table>
+    </div>
+</div>
+
+<form>
+<fieldset>
+        <input type="text" class="form-control" id="txtId" hidden>
+    <div class="form-group">
+        <label for="txtPermissionName" class="form-label mt-6">Permiso:</label>
+        <input type="text" class="form-control" id="txtPermissionName" placeholder="Escriba el nombre del permiso" name="txtPermissionName">
+    </div>
+    <div class="mt-5 d-flex justify-content-between">
+        <button id="btnCreate" class="source-button btn btn-primary btn-xs" type="button" tabindex="8">Crear</button>
+        <button id="btnUpdate" class="source-button btn btn-primary btn-xs" type="button" tabindex="8">Actualizar</button>
+        <button id="btnCancel" class="source-button btn btn-primary btn-xs" type="button" tabindex="8">Cancelar</button>
+    </div>
+    
+</fieldset>
+</form>

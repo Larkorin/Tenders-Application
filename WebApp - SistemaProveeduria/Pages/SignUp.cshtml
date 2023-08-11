@@ -1,0 +1,53 @@
+﻿@page
+@model WebApp___SistemaProveeduria.Pages.SignUpModel
+@{
+}
+<script src="~/js/signup.js"></script>
+
+<h1 class="mt-5">Registro</h1>
+
+<div id="divRegistro">
+    <form>
+        <fieldset>
+            <div class="form-group">
+                <label for="inputId" class="form-label mt-6">Número de cédula</label>
+                <input type="text" class="form-control" id="txtCedula" placeholder="Escriba su número de cédula" required>
+            </div>
+            <div class="form-group">
+                <label for="inputName" class="form-label mt-4">Nombre</label>
+                <input type="text" class="form-control" id="txtNombre" placeholder="Escriba su nombre completo" required>
+            </div>
+            <div class="form-group">
+                <label for="inputName" class="form-label mt-4">Primer apellido</label>
+                <input type="text" class="form-control" id="txtPrimerApellido" placeholder="Escriba su nombre completo" required>
+            </div>
+            <div class="form-group">
+                <label for="inputName" class="form-label mt-4">Segundo apellido</label>
+                <input type="text" class="form-control" id="txtSegundoApellido" placeholder="Escriba su nombre completo" required>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail" class="form-label mt-4">Correo electrónico</label>
+                <input type="email" class="form-control" id="txtCorreo" placeholder="Escriba su dirección de correo electrónico" required>
+            </div>
+            <div class="form-group">
+                 <label for="inputPassword" class="form-label mt-4">Contraseña</label>
+                <input type="password" class="form-control" id="txtContrasenna" placeholder="Escriba su contraseña" autocomplete="off" required>
+            </div>
+
+            <div class="form-group">
+                <label for="inputPhone" class="form-label mt-4">Número de telefono</label>
+                <input type="tel" class="form-control" id="txtTelefono" placeholder="Digite su número de teléfono" required>
+            </div>
+            <button id="btnRegistrar" type="button" class="btn btn-primary mt-4">Registrar</button>
+        </fieldset>
+    </form>
+</div>
+<div id="divVerificarOtp" class="form-group">
+    <h2>Verificación de OTP</h2>
+    <form>
+        <label for="otp" class="form-label mt-4">Código OTP:</label>
+        <input type="text" id="otp" name="otp" class="form-label mt-4"><br>
+        <button type="button" id="verify-button" class="btn btn-primary mt-4">Verificar</button>
+    </form>
+    <input type="text" id="cookie" name="cookie" class="form-label mt-4" hidden>
+</div>
